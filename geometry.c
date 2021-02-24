@@ -3,27 +3,43 @@
 #include <ctype.h>
 
 int main() {
-	char stroka[],ch;
-	int counter, radius, cords;
-	int i = 0;
+	char line[],ch, xcords[], ycords[];
+	int counter, radius;
+	int i = 0, j = 0;
 
 	while ((ch = getchar()) != '\n') {
-		stroka[i] = putchar(ch);
+		line[i] = putchar(ch);
 		++i;
-		if (stroka[i] != ' ')
+		if (line[i] != ' ')
 			++counter;
 	}
-	if ((stroka[0] == 'c') and (stroka[1] == 'i') and (stroka[2] == 'r') and
-			(stroka[2] == 'c') and (stroka[3] == 'l') and 
-			(stroka[4] == 'e')) {
-		if (stroka[5] == ' ') {
-			i = 6;
-			while (stroka[i] == ' ';) {
-				stroka[i] = '';
-				i++;
-			}
-		if (stroka[i] == '(') 
-			i++;
-		while (isdigit(stroka[i]) != 0) {
-			xcords = stroka[i];
+	
+	i = 0;
 
+	while (isalpha(line[i] == 0) {
+		line[i] = '';
+	}
+	
+	i = 0;
+	
+	if ((line[i] == 'c') { 
+		if (line[i+1] == 'i') and (line[i+2] == 'r') and (line[i+3] == 'c') and (line[i+4] == 'l') and (line[i+5] == 'e')) {
+			if (line[5] == ' ') {
+				i = 6;
+				while (line[i] == ' ';) {
+					line[i] = '';
+					i++;
+				}
+				if (line[i] == '(') 
+				i++;
+				while (isdigit(line[i]) != 0) {
+			
+					xcords[j] = line[i];
+					j++;
+					i++;		
+				}
+			}
+		}
+	}
+	return 0;
+}
