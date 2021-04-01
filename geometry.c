@@ -12,14 +12,11 @@ void ERROR(int TOF)
 }
 int main() {
 	char line[1000],ch, xcords[100], ycords[100];
-	int counter, radius;
 	int i = 0, j = 0, TOF = 0, k = 0, x = 0, y = 0;
 
 	while ((ch = getchar()) != '\n') {
 		line[i] = tolower(ch);
 		++i;
-		if (line[i] != 32)
-			++counter;
 	}
 	
 	i = 0;
