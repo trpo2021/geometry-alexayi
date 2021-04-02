@@ -11,8 +11,8 @@ void ERROR(int TOF)
 	}
 }
 int main() {
-	char line[1000],ch, xcords[100], ycords[100];
-	int i = 0, j = 0, TOF = 0, k = 0, x = 0, y = 0;
+	char line[1000],ch, xcords[100], ycords[100], radius[100];
+	int i = 0, j = 0, TOF = 0, k = 0, x = 0, y = 0, r = 0;
 
 	while ((ch = getchar()) != '\n') {
 		line[i] = tolower(ch);
@@ -52,6 +52,16 @@ int main() {
 					i++;
 					x++;		
 			}
+			while (line[i] == 32)
+                                i+=1;
+			j = 0;
+			while (isdigit(line[i])) {
+                                        ycords[j] = line[i];
+                                        j++;
+                                        i++;
+                                        y++;
+                        }
+
 			while (line[i] == 32) 
 				i+=1;
 			if ((line[i] != 32) && (line[i] != 44)) {
@@ -68,10 +78,10 @@ int main() {
 				}
 				j = 0;
 				while (isdigit(line[i])) {
-					ycords[j] = line[i];
+					radius[j] = line[i];
 					j++;
 					i++;
-					y++;		
+					r++;		
 				}
 			}							
 		}
@@ -85,9 +95,12 @@ int main() {
 		printf("(");	
 		for (k = 0; k < x; k++) 
 			putchar(xcords[k]);
+		printf(" ");
+		for (k = 0; k < x; k++)
+                        putchar(ycords[k]);
 		printf(", ");
 		for (k = 0; k < y; k++) 
-			putchar(ycords[k]);
+			putchar(radius[k]);
 		printf(")");
 	}
 	return 0;
