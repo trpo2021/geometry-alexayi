@@ -6,7 +6,7 @@
 void ERROR(int TOF) 
 {
 	if (TOF == 0) {
-		printf("data entry error");
+		printf("data entry error\n");
 		exit(0);
 	}
 }
@@ -85,9 +85,7 @@ int main() {
 				}
 			}							
 		}
-	}
-	if (TOF == 0) 
-		ERROR(TOF);		
+	    }
 	}
 	if (TOF != 0) {
 		for (k = count; k < (count + 6);k++)
@@ -103,5 +101,7 @@ int main() {
 			putchar(radius[k]);
 		printf(")");
 	}
+	if (TOF == 0)
+                ERROR(TOF);
 	return 0;
 }
