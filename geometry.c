@@ -94,10 +94,10 @@ int main() {
 		for (k = 0; k < x; k++) 
 			putchar(xcords[k]);
 		printf(" ");
-		for (k = 0; k < x; k++)
+		for (k = 0; k < y; k++)
                         putchar(ycords[k]);
 		printf(", ");
-		for (k = 0; k < y; k++) 
+		for (k = 0; k < r; k++) 
 			putchar(radius[k]);
 		printf(")");
 	}
